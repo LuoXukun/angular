@@ -15,16 +15,19 @@ export class HeroService {
   /* get heroes list */
   getHeroes(): Observable<Hero[]> {
     this.messageService.add('HeroService: fetched heroes');
-    return this.http.get<Hero[]>(this.heroesUrl)
-    .pipe(
+    return this.http.get<Hero[]>(this.heroesUrl).pipe(
       tap(heroes => this.log('fetched heroes')),
       catchError(this.handleError('getHeroes', []))
     );
   }
-
+  /* get hero by id */
   getHero(id: number): Observable<Hero> {
     this.messageService.add(`HeroService: fetch hero id= ${id}`);
-    return this.http.get<Hero[]>(this.heroesUrl)[0];
+    const url = `${this.heroesUrl}/${id}`;
+    return this.http.get<Hero>(url).pipe(
+      tap(_ => this.log(`fetched hero id = ${id}`)),
+      catchError(this.handleError<Hero>(`getHero id = ${id}`))
+    );
     //return of(HEROES.find(hero => hero.id === id));
   }
 
