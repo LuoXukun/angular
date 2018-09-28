@@ -5,4 +5,6 @@
 </nav>
 <router-outlet></router-outlet> <!--添加路由出口-->
 <app-message></app-message>
-<p appHighlight>Highlight me!</p>
+<p appHighlight>Highlight me in default color!</p>
+<p [appHighlight]="'orange'">Highlight me in orange!</p>
+<p [appHighlight]="color">Highlight me in parent component's color!</p>
