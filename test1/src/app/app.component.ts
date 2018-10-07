@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 
+import { AdService } from "./ad.service";
+import { AdItem } from "./ad-item";
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -10,8 +13,11 @@ export class AppComponent {
   myHero: string;
   heroes = ['Windstorm', 'Bombasto', 'Magneta', 'Tornado'];
 
-  constructor() {
+  ads: AdItem[];
+
+  constructor(private adService: AdService) {
     this.title = 'Tour of Heroes';
     this.myHero = 'Windstorm';
+    this.ads = this.adService.getAds();
   }
 }
