@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'test1';
+  title: string;
+  myHero: string;
+  heroes = ['Windstorm', 'Bombasto', 'Magneta', 'Tornado'];
+
+  constructor() {
+    this.title = 'Tour of Heroes';
+    this.myHero = 'Windstorm';
+  }
 }
