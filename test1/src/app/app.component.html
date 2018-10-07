@@ -9,6 +9,22 @@
 <p *ngIf="heroes.length > 3">There are many heroes!</p>
 
 <app-hero-parent></app-hero-parent>
+
+<br>
+<br>
+
+<h2>unless</h2>
+<p *appUnless="condition">Show this sentence unless the condition is true.</p>
+
+<br>
+<br>
+
 <div>
   <app-ad-banner [ads]="ads"></app-ad-banner>
 </div>
+
+<br>
+<br>
+
+<h2>Power Booster(管道)</h2>
+<p>Super power boost: {{2 | exponentialStrength: 10}}</p>

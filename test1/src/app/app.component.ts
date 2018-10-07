@@ -12,6 +12,7 @@ export class AppComponent {
   title: string;
   myHero: string;
   heroes = ['Windstorm', 'Bombasto', 'Magneta', 'Tornado'];
+  condition = false;
 
   ads: AdItem[];
 

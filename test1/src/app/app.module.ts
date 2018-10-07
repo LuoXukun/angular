@@ -9,6 +9,8 @@ import { AdBannerComponent } from './ad-banner/ad-banner.component';
 import { HeroJobAdComponent } from "./hero-job-ad.component";
 import { HeroProfileComponent } from "./hero-profile.component";
 import { AdService } from './ad.service';
+import { UnlessDirective } from './unless.directive';
+import { ExponentialStrengthPipe } from './exponential-strength.pipe';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { AdService } from './ad.service';
     AdDirective,
     AdBannerComponent,
     HeroJobAdComponent,
-    HeroProfileComponent
+    HeroProfileComponent,
+    UnlessDirective,
+    ExponentialStrengthPipe
   ],
   imports: [
     BrowserModule
