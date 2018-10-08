@@ -1,7 +1,7 @@
 <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
   <label>
     First Name:
-    <input type="text" formControlName="firstName">
+    <input type="text" formControlName="firstName" required>
   </label>
   <label>
     Last Name:
@@ -25,6 +25,7 @@
       <input type="text" formControlName="zip">
     </label>
   </div>
-  <button type="default" (click)="updateProfile()">Update Profile</button>
+  <button type="button" (click)="updateProfile()">Update Profile</button>
+  <br>
   <button type="submit" [disabled]="!profileForm.valid">submit</button>
 </form>
