@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { NameEditorComponent } from './name-editor/name-editor.component';
 import { ProfileEditorComponent } from './profile-editor/profile-editor.component';
 import { DynamicFormComponent } from './dynamic-form/dynamic-form.component';
+import { DynamicFormQuestionComponent } from './dynamic-form-question/dynamic-form-question.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NameEditorComponent,
     ProfileEditorComponent,
-    DynamicFormComponent
+    DynamicFormComponent,
+    DynamicFormQuestionComponent
   ],
   imports: [
     BrowserModule,
